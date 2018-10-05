@@ -44,14 +44,18 @@ bind CS f command search
 bind C d command send !go build
 
 # ctrl-n sends plain space
-bind C n command send  
+bind C n command send  .
 
 # set colors
 foreground black
-border lightblue
-# background white:seashell:lightgreen:oldlace:lightcyan:gainsboro:lightyellow:mintcream:snow:lightblue:thistle
+
+# border lightblue
+# border #AAD2D5
+border black
+
 # background seashell
-background oldlace
+# background oldlace
+background #F4E6D5
 
 # tabs
 tabs 2
