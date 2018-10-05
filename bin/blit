@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $HOME/repos/blit
+./o.blit -t 'tcp!papnet.eu!8888' -C 00ff00,000000
+

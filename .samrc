@@ -1,0 +1,63 @@
+# seh samrc
+
+# ctrl-a/e begin/end of line
+bind C a command bol
+bind C e command eol
+
+# Escape jumps between cmd and file
+bind * Escape command jump
+
+# ctrl-u deletes left of cursor
+bind C u command delbol
+
+# escape jumps between cmd and file
+bind * Escape command jump
+
+# ctrl-w deletes prev word
+bind C w command delword
+
+# ctrl-x/c/v/q does cut/snarf/paste/exchange
+bind C x command cut
+bind C c command snarf
+bind C v command paste
+bind C q command exchange
+
+# arrow keys and page up/down work as expected
+bind * Up command lineup
+bind * Down command linedown
+bind * Left command charleft
+bind * Right command charright
+bind * Prior command scrollup
+bind * Next command scrolldown
+
+# ctrl-z undoes
+bind C z command send u
+
+# ctrl-s writes
+bind C s command write
+
+# ctrl-f/F does look/search
+bind C f command look
+bind CS f command search
+
+# ctrl-d does go build # would be nice if wrote also
+bind C d command send !go build
+
+# ctrl-n sends plain space
+bind C n command send  
+
+# set colors
+foreground black
+border lightblue
+# background white:seashell:lightgreen:oldlace:lightcyan:gainsboro:lightyellow:mintcream:snow:lightblue:thistle
+# background seashell
+background oldlace
+
+# tabs
+tabs 2
+
+# autoindent
+autoindent true
+
+# set font to go 12
+font Go Mono:size=12

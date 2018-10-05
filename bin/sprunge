@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat $* | curl -F 'sprunge=<-' http://sprunge.us
+

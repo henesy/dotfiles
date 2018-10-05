@@ -1,0 +1,23 @@
+#!/usr/bin/env rc
+# gr - recursive grep(1)
+
+fn usage {
+	echo >[1=2] usage: gr [grep options] pattern [file...]
+	exit usage
+}
+
+fn findfiles {
+	du -as $* |awk '{if ($2 != ".") print $2}'
+}
+
+opts=()
+while(~ $1 -*){
+	opts=($opts $1)
+	shift
+}
+
+if(~ $#* 0)
+	usage
+
+pattern=$1; shift
+grep -n $opts -e $pattern `{findfiles $*}

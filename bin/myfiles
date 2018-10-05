@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo umount -l myfiles
+#sshfs seh@linux-7.ece.iastate.edu:/myfiles/seh /home/henesy/myfiles
+sshfs seh@pyrite.cs.iastate.edu:/home/seh /home/henesy/myfiles
+
