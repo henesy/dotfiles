@@ -23,8 +23,8 @@ bind C v command paste
 bind C q command exchange
 
 # arrow keys and page up/down work as expected
-bind * Up command lineup
-bind * Down command linedown
+#bind * Up command lineup
+#bind * Down command linedown
 bind * Left command charleft
 bind * Right command charright
 bind * Prior command scrollup
@@ -42,9 +42,14 @@ bind CS f command search
 
 # ctrl-d does go build # would be nice if wrote also
 bind C d command send !go build
+bind CS d command send !go install
 
 # ctrl-n sends plain space
-bind C n command send  .
+bind C b command send  .
+
+# ctrl-,/. sends unind/ind
+bind C n command send s/^/	/g
+bind C m command send s/^	//g
 
 # set colors
 foreground black
@@ -58,7 +63,7 @@ border black
 background #F4E6D5
 
 # tabs
-tabs 2
+tabs 4
 
 # autoindent
 autoindent true
