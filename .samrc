@@ -48,8 +48,8 @@ bind CS d command send !go install
 bind C b command send  .
 
 # ctrl-,/. sends unind/ind
-bind C n command send s/^/	/g
-bind C m command send s/^	//g
+bind C m command send s/^/	/g
+bind C n command send s/^	//g
 
 # set colors
 foreground black
